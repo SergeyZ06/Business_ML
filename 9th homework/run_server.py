@@ -1,9 +1,5 @@
 # Main module for starting service.
 
-# $env:FLASK_APP = "run_server"
-# flask run
-# http://127.0.0.1:5000//predict
-
 
 import flask
 from flask import Flask

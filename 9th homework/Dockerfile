@@ -9,4 +9,4 @@ RUN apt update
 RUN apt install -y python3-virtualenv
 RUN virtualenv /app/venv
 RUN /app/venv/bin/pip3 install -r /app/requirements.txt
-ENTRYPOINT /app/venv/bin/python3 run_server.py
+ENTRYPOINT /app/venv/bin/python3 /app/run_server.py

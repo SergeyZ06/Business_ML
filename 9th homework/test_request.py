@@ -16,7 +16,6 @@ def get_prediction(url, comment_text):
     return json.load(response)
 
 
-# model_url = r'http://127.0.0.1:5000//predict'
 model_url = r'http://0.0.0.0:8180//predict'
 
 print(get_prediction(model_url, r'test'))
