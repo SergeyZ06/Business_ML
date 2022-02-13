@@ -11,9 +11,10 @@ from flask import Flask
 import pandas as pd
 import dill
 import json
+import os
 
 
-PATH_MODEL = r'model.dill'
+PATH_MODEL = r'/app/model.dill'
 
 
 def make_prediction(text):
@@ -49,3 +50,7 @@ def predict():
                 'error': str(exc)
             })
         )
+
+
+port = int(os.environ.get('PORT', 8180))
+flask_app.run(host='0.0.0.0', debug=True, port=port)
